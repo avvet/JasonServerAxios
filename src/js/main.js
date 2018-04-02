@@ -7,7 +7,7 @@ func();
 
 // import {funct} from "./http/http-service";
 
-import {myAxios} from "./http/http-service";
+import {httpService} from "./http/http-service";
 console.log('Hello,world');
 
 let getPostsBtn = document.getElementById('btn');
@@ -19,5 +19,5 @@ let myParagraph = document.getElementById('paragraph');
 // };
 
 getPostsBtn.onclick = () => {
-  myAxios.getAll();
+  httpService.getAll();
 };

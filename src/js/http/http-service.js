@@ -18,7 +18,7 @@ const DIVIDER = '/';
 
 //////////////////////////////////////////////////////
 
-class myAxiosClass {
+class HttpServiceClass {
   getAll(){
     axios.get(BASE_URL + USERS + DIVIDER + '1')
       .then(function (response) {
@@ -30,6 +30,6 @@ class myAxiosClass {
   };
 }
 
-let myAxios = new myAxiosClass();
+let httpService = new HttpServiceClass();
 
-export{myAxios};
+export{httpService};
