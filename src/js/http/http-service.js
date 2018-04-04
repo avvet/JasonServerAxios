@@ -21,13 +21,24 @@ const DIVIDER = '/';
 
 class HttpServiceClass {
   getAll(){
-    axios.get(BASE_URL + USERS + DIVIDER + '3')
+    axios.get(BASE_URL + USERS)
       .then(function (response) {
         console.log(response.data);
+        getTitles(response.data);
       })
       .catch(function (error) {
         console.log(error,'My error');
       });
+  };
+  getDescription(callback){
+    axios.get(BASE_URL + COMP + DIVIDER + '1')
+      .then(response =>{
+        callback(response.data.description);
+        console.log(response.data.description);
+      })
+      .catch(error =>{
+        console.log(error,'my error');
+      })
   };
   // getId(){
   //   axios.get(BASE_URL + USERS, {
@@ -43,7 +54,7 @@ class HttpServiceClass {
   //     });
   // };
   postAll(){
-    axios.post((BASE_URL + USERS), {
+    axios.post((BASE_URL + USERS ), {
         firstname: 'Fred',
         lastname: 'Flintstone',
         email: 'fred@gmail.com',
@@ -84,14 +95,15 @@ class HttpServiceClass {
 
 
 }
+function getTitles(users) {
+  users.map(user => console.log(user.age, 'MY TITLE'));
+
+}
 
 
 let httpService = new HttpServiceClass();
 
 export{httpService};
-
-
-
 
 
 

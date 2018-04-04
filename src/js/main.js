@@ -15,6 +15,7 @@ let getPostsBtn = document.getElementById('btn');
 let singlePostBtn = document.getElementById('single_btn');
 let myParagraph = document.getElementById('paragraph');
 let dltBtn = document.getElementById('dlt_btn');
+let changeDescript = document.getElementById('change_descript');
 
 // getPostsBtn.onclick = () => {
 //   funct();
@@ -37,3 +38,13 @@ myParagraph.onclick = () => {
 dltBtn.onclick = () => {
   httpService.deleteAll();
 };
+
+change_descript.onclick = () => {
+  httpService.getDescription(description => {
+    print(description);
+  });
+};
+
+function print(description){
+  myParagraph.innerHTML = description;
+}
