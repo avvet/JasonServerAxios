@@ -1,20 +1,12 @@
 {
   "users": [
     {
-      "id": "1",
-      "firstname": "John",
-      "lastname": "Doe",
-      "email": "john@gmail.com",
-      "age": "34",
-      "companyId": "3"
-    },
-    {
       "id": "2",
-      "firstname": "Jack",
-      "lastname": "Black",
-      "email": "jack@gmail.com",
-      "age": "45",
-      "companyId": "2"
+      "firstname": "Jorge",
+      "lastname": "Flintstone",
+      "email": "fred@gmail.com",
+      "age": "20",
+      "companyId": "5"
     },
     {
       "id": "3",
