@@ -20,31 +20,53 @@ let changeDescript = document.getElementById('change_descript');
 // getPostsBtn.onclick = () => {
 //   funct();
 // };
+//////////////////////////////////////////////////
+// // getPostsBtn.onclick = () => {
+// //   httpService.getAll();
+// //   // httpService.getId();
+// //
+// // };
+// //
+// // singlePostBtn.onclick = () => {
+// //   httpService.postAll();
+// // };
+// //
+// // myParagraph.onclick = () => {
+// //   httpService.patchAll();
+// // };
+// //
+// // dltBtn.onclick = () => {
+// //   httpService.deleteAll();
+// // };
+// //
+// // change_descript.onclick = () => {
+// //   httpService.getDescription(description => {
+// //     print(description);
+// //   });
+// // };
+// //
+// // function print(description){
+// //   myParagraph.innerHTML = description;
+// }
 
 getPostsBtn.onclick = () => {
-  httpService.getAll();
-  // httpService.getId();
-
-};
-
-singlePostBtn.onclick = () => {
-  httpService.postAll();
-};
-
-myParagraph.onclick = () => {
-  httpService.patchAll();
-};
-
-dltBtn.onclick = () => {
-  httpService.deleteAll();
-};
-
-change_descript.onclick = () => {
-  httpService.getDescription(description => {
-    print(description);
+  httpService.getPost((age)=>{
+    myParagraph.innerHTML = age;
   });
 };
 
-function print(description){
-  myParagraph.innerHTML = description;
+singlePostBtn.onclick = () => {
+  httpService.postNewUser();
+};
+
+myParagraph.onclick = () => {
+  httpService.patchInfo('1');
+};
+
+dltBtn.onclick = () => {
+  httpService.deleteInfo('1');
+};
+
+changeDescript.onclick = () => {
+  httpService.mapPost();
 }
